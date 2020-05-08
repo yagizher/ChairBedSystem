@@ -172,8 +172,7 @@ AddEventHandler('ChairBedSystem:Client:Animation', function(v, objectcoords)
                 
                 Animation(dict, anim, ped)
             else
-                TaskStartScenarioAtPosition(ped, Config.objects.BedBackAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true
-            )
+                TaskStartScenarioAtPosition(ped, Config.objects.BedBackAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
             end
         elseif Anim == 'stomach' then
             if Config.objects.BedStomachAnimation.dict ~= nil then
