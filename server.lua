@@ -8,7 +8,6 @@
 local oArray = {}
 local oPlayerUse = {}
 
-
 AddEventHandler('playerDropped', function()
     local oSource = source
     if oPlayerUse[oSource] ~= nil then
@@ -16,7 +15,6 @@ AddEventHandler('playerDropped', function()
         oPlayerUse[oSource] = nil
     end
 end)
-
 
 RegisterServerEvent('ChairBedSystem:Server:Enter')
 AddEventHandler('ChairBedSystem:Server:Enter', function(object, objectcoords)
@@ -28,7 +26,6 @@ AddEventHandler('ChairBedSystem:Server:Enter', function(object, objectcoords)
     end
 end)
 
-
 RegisterServerEvent('ChairBedSystem:Server:Leave')
 AddEventHandler('ChairBedSystem:Server:Leave', function(objectcoords)
     local oSource = source
@@ -36,4 +33,3 @@ AddEventHandler('ChairBedSystem:Server:Leave', function(objectcoords)
     oPlayerUse[oSource] = nil
     oArray[objectcoords] = nil
 end)
-
